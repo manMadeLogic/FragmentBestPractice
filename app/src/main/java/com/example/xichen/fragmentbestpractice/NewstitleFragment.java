@@ -15,8 +15,8 @@ import java.util.List;
 /**
  * Created by Xi Chen on 2016/8/12.
  */
-public class NewstitleFragment extends Fragment {
-    private ListView newsTitleListView;
+public class NewsTitleFragment extends Fragment {
+
     private List<News> newsList = new ArrayList<News>();
     private NewsAdapter adapter;
     private boolean isTwoPane;
@@ -30,6 +30,7 @@ public class NewstitleFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        ListView newsTitleListView;
         View view = inflater.inflate(R.layout.news_title, container, false);
         newsTitleListView = (ListView) view.findViewById(R.id.news_title_list_view);
         newsTitleListView.setAdapter(adapter);
